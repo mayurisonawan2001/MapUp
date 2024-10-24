@@ -146,6 +146,8 @@ def rotate_and_multiply_matrix(matrix: List[List[int]]) -> List[List[int]]:
     return transformed_matrix
 
 
+df = pd.read_csv('MapUp/dataset-1.csv')
+results = time_check(df)
 def time_check(df) -> pd.Series:
     df['start_datetime'] = pd.to_datetime(df['startDay'] + ' ' + df['startTime'])
     df['end_datetime'] = pd.to_datetime(df['endDay'] + ' ' + df['endTime'])
